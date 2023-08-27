@@ -31,6 +31,8 @@ function onSelectBreed(evt) {
   loader.hidden = false;
   fetchCatByBreed(breedId);
 
+  container.innerHTML = '';
+
   fetchCatByBreed(breedId)
     .then(arr => {
       const breedItems = {
@@ -45,11 +47,13 @@ function onSelectBreed(evt) {
       <p>${description}</p>
       <p><b>Temperament: </b>${temperament}</p>`;
       }
+
       createMarkup(breedItems);
 
       loader.hidden = true;
     })
     .catch(error => {
       textError.hidden = false;
+      loader.hidden = true;
     });
 }
