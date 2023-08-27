@@ -18,6 +18,7 @@ fetchBreeds()
       option.value = breed.id;
       option.textContent = breed.name;
       select.append(option);
+      loader.hidden = true;
     });
   })
   .catch(error => {
@@ -44,6 +45,7 @@ function onSelectBreed(evt) {
       <p><b>Temperament: </b>${temperament}</p>`;
       }
       createMarkup(breedItems);
+
       loader.hidden = true;
     })
     .catch(error => {
