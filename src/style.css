@@ -1,4 +1,4 @@
-/* .loader {
+.loader {
   width: 48px;
   height: 48px;
   border: 5px solid #050505;
@@ -16,7 +16,7 @@
   100% {
     transform: rotate(360deg);
   }
-} */
+}
 [include*='form-input-select()'] {
   display: block;
   padding: 0;
