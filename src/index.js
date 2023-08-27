@@ -19,6 +19,7 @@ fetchBreeds()
       option.textContent = breed.name;
       select.append(option);
       loader.hidden = true;
+      select.hidden = false;
     });
   })
   .catch(error => {

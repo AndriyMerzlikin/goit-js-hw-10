@@ -7,7 +7,17 @@
     <title>Homework 10</title>
   </head>
   <body>
-    <select id="single" class="breed-select"></select>
+    <div include="form-input-select()">
+      <select class="breed-select" hidden required>
+        <option value="">choose cat</option>
+        <!--
+      This is how we can do "placeholder" options.
+      note: "required" attribute is on the select
+    -->
+      </select>
+    </div>
+
+    <!-- <select class="breed-select" hidden></select> -->
     <p class="loader">Loading data, please wait...</p>
     <p class="error" hidden>
       Oops! Something went wrong! Try reloading the page!
