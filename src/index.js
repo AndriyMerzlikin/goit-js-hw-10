@@ -1,9 +1,10 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
-import SlimSelect from 'slim-select';
+// import SlimSelect from 'slim-select';
 
-// new SlimSelect({
-//   select: '#single',
-// });
+// // new SlimSelect({
+// //   select: '#single',
+// // });
+// import 'slim-select/dist/slimselect.css';
 
 const loader = document.querySelector('.loader');
 const textError = document.querySelector('.error');
@@ -51,6 +52,7 @@ function onSelectBreed(evt) {
       createMarkup(breedItems);
 
       loader.hidden = true;
+      textError.hidden = true;
     })
     .catch(error => {
       textError.hidden = false;
