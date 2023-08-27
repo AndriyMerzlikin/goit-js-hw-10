@@ -1,9 +1,9 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
-import SlimSelect from 'slim-select';
+// import SlimSelect from 'slim-select';
 
-new SlimSelect({
-  select: '.breed-select',
-});
+// new SlimSelect({
+//   select: '.breed-select',
+// });
 
 const loader = document.querySelector('.loader');
 const textError = document.querySelector('.error');
@@ -13,18 +13,6 @@ select.addEventListener('change', onSelectBreed);
 
 // loader.hidden = false;
 textError.hidden = true;
-
-// function load() {
-//   if (!fetchBreeds) {
-//     loader.hidden = false;
-//     select.hidden = true;
-//   } else {
-//     loader.hidden = true;
-//     textError.hidden = true;
-//   }
-// }
-
-// load();
 
 fetchBreeds()
   .then(breeds => {
